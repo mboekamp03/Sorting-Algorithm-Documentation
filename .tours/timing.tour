@@ -1,0 +1,41 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "timing",
+  "steps": [
+    {
+      "file": "timing/timeit.cpp",
+      "description": "The first thing in this program is the headers. We are utilizing C++ standard library's chrono whuch provides time related functionality, which is essential in a sorting alogorithm timer. Then we include iostream for input output. We also include fstream as we will be reading and writing to files. Finally, we included the sorts.h header file which includes merge, quick, radix, and insertion sort. For a more detailed explanation of those, go to the visual code tour on visual.cpp in the final folder. This contains an SDL visualizer and videos as well as an explanation of each algorithm.",
+      "line": 11
+    },
+    {
+      "file": "timing/timeit.cpp",
+      "description": "This function reads in integers from a file and stores then im a vector. ",
+      "line": 30
+    },
+    {
+      "file": "timing/timeit.cpp",
+      "description": "This function takes a sorted array, a vector of times (in milliseconds), and an output file name as its parameters. It appends the sorted array and the times to the specified output file for recording the data.",
+      "line": 69
+    },
+    {
+      "file": "timing/timeit.cpp",
+      "description": "THis timing function records the time before and after running the sorting algorithm. It returns the milliseconds ellapsed.",
+      "line": 91
+    },
+    {
+      "file": "timing/timeit.cpp",
+      "description": "Finally, here is the main function which tracks how much time each algorithm takes to sort an array.",
+      "line": 104
+    },
+    {
+      "file": "timing/timeit.cpp",
+      "description": "The results are then added to the specified output file.",
+      "line": 127
+    },
+    {
+      "file": "timing/timeit.cpp",
+      "description": "To finish up this code tour, here's a few notes on running this program\n1. It takes a while. I remember the last time I ran it, it took upwards of a half an hour. \n2. Radix sort is somehow the fastest algorithm. Based on all the research we did developing this, we were not expecting this. \n3. As a developer on this project I'll assume you will end up running this program so after you do please let the development team know of the results and if Radix was (by far) your fastest time as it was ours.\n\nThanks for contributing to this project! ",
+      "line": 128
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "makefile",
+  "steps": [
+    {
+      "file": "final/Makefile",
+      "description": "Here is a simple make file to compile the code. To use it, simply use cd to enter the final directory and run make. This will compile the code and you will be able to run it using visual <file-name> <mode>. remember, mode can only be between 1 and 4. ",
+      "line": 1
+    }
+  ]
+}

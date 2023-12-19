@@ -1,0 +1,11 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "sorts",
+  "steps": [
+    {
+      "file": "timing/sorts.cpp",
+      "description": "This function is another use of the four sorting algorithms I discussed in tthe visual code tour. This file does have some differences but the functionality of the sorting algorithm remains the same. These are the sorting algorithms as we intially wrote them in the project. We made some minor adjustmetns in the visual.cpp file to make implementation slightly easier. Something you, as a developer on the team could undertake is changing the sorting algorithms in visual.cpp and replacing them with modifed versions of these (the modifications would be the SDL functionality). Also, sorts.h is simply the header file assciated with these functions.",
+      "line": 1
+    }
+  ]
+}

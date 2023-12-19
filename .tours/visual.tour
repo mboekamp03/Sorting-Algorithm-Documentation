@@ -1,0 +1,101 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "visual",
+  "steps": [
+    {
+      "file": "final/visual.cpp",
+      "description": "Here are the libraries used in this program. Don't worry, you'll see some errors but this is nothing to be concerned about (We can run the code with a temporary fix that I'll show you later on). This error stems from not having the SDL2 library linked.",
+      "line": 1
+    },
+    {
+      "file": "final/visual.cpp",
+      "description": "Heres some global variables. These first 4 all affect the appearance of the visualizer. The screen height and width can be freely changed but the current dimensions work well.",
+      "line": 9
+    },
+    {
+      "file": "final/visual.cpp",
+      "description": "Time for some more global variables. These control individual bar width so the bars stretch across the screen, regardless of the number of inputs. The max bar height variable is to help visualization and adds a space between the top of the screen and the top of the highest bar. Frame delay is able to be changed. During testing I found 50 to be optimal.\n",
+      "line": 14
+    },
+    {
+      "file": "final/visual.cpp",
+      "description": "This function renders the bars used during visualization. This creates each bar with the corresponding size based on the number of total bars. It also assigns the color white to the bar which is currently being sorted. This is called each time the state of the array needs to be visualized and a certain element can be shown moving across the array.",
+      "line": 18
+    },
+    {
+      "file": "final/visual.cpp",
+      "description": "Now, for the alternative version of the function. This is called with only two parameters and can be called whenever there is  no need to visualize an individual element moving. Both of the functions are called renderBars but are differentiated by their parameters, a concept known as function overloading in C++.",
+      "line": 40
+    },
+    {
+      "file": "final/visual.cpp",
+      "description": "Now, heres the first sorting algorithm we can visualize, Radix Sort. Radix sort is a non-comparative sorting algorithm that sorts data by grouping keys by individual digits which share the same significant position and value. If you want more details you can watch this short YouTube video by [GeeksforGeeks](https://www.youtube.com/watch?v=nu4gDuFabIM) that does a good job at explaining the topic. Lets go through the code. This function takes in an array, the maximum number of digits to be sorted, and the SDL renderer, used to visualize the process. renderBars is called, using the two parameter version to visualize the current state of the array. From here, we loop through each difit and creates buckets/containers, one for each digit. Then, each element of the array is placed into the correct bucket. The array is repopulated with numbers from the buckets, effectively sorting them. After this, we call RenderBars to visualize the array once again.",
+      "line": 56,
+      "selection": {
+        "start": {
+          "line": 56,
+          "character": 1
+        },
+        "end": {
+          "line": 79,
+          "character": 2
+        }
+      }
+    },
+    {
+      "file": "final/visual.cpp",
+      "description": "Now, lets move to the next algorithm, Merge Sort. The first function here is mergeSortHelper which merges two sorted sub arrays into a single sorted array. If you need a brief refresher on merge sort, I recommend you watch this [video](https://www.youtube.com/watch?v=4VqmGXwpLqc), a quick overview of the alogorithm in 3 minutes. This function takes in several parameters:\n1. arr: Reference to the vector of integers being sorted.\n2. left: Starting index of the left sub-array.\n3. mid: Ending index of the left sub-array (and mid-point of division).\n4. right: Ending index of the right sub-array.\n5. renderer: SDL renderer for visualization.  \n\nNow, lets go through how this function works, step by step. First lets intialize the indices. i, j, and k are indices for the left sub-array, right sub-array, and temporary array, respectively. Next, a temporaty array is cretaed to hold merged elements. The while loops merge elements from the left and right sub-arrays into temp, maintaining sorted order. If either sub-array has remaining elements, they are copied into temp. Finally, merged elements from temp are copied back to arr. After this, the state of the array is shown in the visualizer, using the function to show the current element.",
+      "line": 81
+    },
+    {
+      "file": "final/visual.cpp",
+      "description": "Now here is the mergeSort function which implements the divide and conquer strategy, dividing the larger array into smaller sub arrays and then sorting them and finally merging them all back together. This function has a few basic steps. First is the base case which stops the recursive calls if left is not less than right which means the sub array has one element. From here, the midpoint is calculated and the function is recursively called. Finally, the sorted halves are merged.",
+      "line": 113
+    },
+    {
+      "file": "final/visual.cpp",
+      "description": "Lets move onto the next sorting algorithm, Insertion Sort. Insertion Sort is a simple sorting algorithm that builds the final sorted array one item at a time by repeatedly taking the next element and inserting it into its correct position within the already-sorted portion of the array. If you want a quick overview on the algorithm here is another [video](https://www.youtube.com/watch?v=JU767SDMDvA) explaining it in 2 minutes. This video is concise and explains the concepts well, it's how myself and the rest of the team learned these. Let's go through our implementation. First we define temporary variables and bein to loop through the array, starting at the second element. The, the temporary variables are intialized and the correct position for the current element is found. Then the elements are shifted to accomodate for the new placement. The state of the array is visualized after each shift and then finally shown after each element is moved to the correct position.",
+      "line": 127
+    },
+    {
+      "file": "final/visual.cpp",
+      "description": "Now its time to go through the final algorithm implemented in this local visualizer, Quick Sort. Quick Sort is an efficient, divide-and-conquer sorting algorithm that selects a 'pivot' element and partitions the array into two halves, placing all elements smaller than the pivot before it and all larger elements after it, and then recursively applies the same process to the sub-arrays. Once again, here is a great short video to help explain the concept. Unfortunately, this one is a little longer at [4 minutes](https://www.youtube.com/watch?v=Hoixgm4-P4M). The first function we are going to go through is the quickSortHelper function. This function performs the partitioning step of the algorithm. It takes in the following parameters:\n1. arr: The array to be sorted.\n2. left: The starting index for the partition.\n3. right: The ending index for the partition.\n4. renderer: SDL renderer for visualization.  \n\nTHe first thing the function does is intizlize the indices. Then, there is a partioning loop which moves i and j searching for elements on the wrong side of the pivot. If i and j have not crossed they are swapped and the state of the array is visualized. the pivots index is then returned.",
+      "line": 153
+    },
+    {
+      "file": "final/visual.cpp",
+      "description": "The main function in quick sort is this one. It recursively sorts the sub-arrays. ",
+      "line": 190
+    },
+    {
+      "file": "final/visual.cpp",
+      "description": "Now, here is a quick function to call to start the quick sort process.",
+      "line": 200
+    },
+    {
+      "file": "final/visual.cpp",
+      "description": "Here is the main function to run this program and the other functions you just learned about. ",
+      "line": 204
+    },
+    {
+      "file": "final/visual.cpp",
+      "description": "The first thing done is get data from a file. A reminder when making your own test cases, the data has to be formatted as follows: 1 2 3 4 5, otherwise it will not work. This is certainly something that can be modified.",
+      "line": 205
+    },
+    {
+      "file": "final/visual.cpp",
+      "description": "Here is where sdl is intialized. This part of the code is essential. When working with the codebase, it is important that these few lines remain the same.",
+      "line": 220
+    },
+    {
+      "file": "final/visual.cpp",
+      "description": "Here is the loop to run the program. Depending on the mode, the correct sorting algorithm is called which begins the sorting and visualizng process.",
+      "line": 242
+    },
+    {
+      "file": "final/visual.cpp",
+      "description": "When the window is closed, the program exits and renderer and window are cleaned up.",
+      "line": 266
+    }
+  ]
+}

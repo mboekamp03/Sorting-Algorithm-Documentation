@@ -1,0 +1,91 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "main",
+  "steps": [
+    {
+      "file": "timing/main.py",
+      "description": "This Python script is designed to test and analyze the performance of different sorting algorithms. It's structured to handle various test cases, record results, and compile and run a C++ program that performs the sorting. First, several librareis are used. A reminder, before running this program do pip install pandas\n",
+      "line": 34,
+      "selection": {
+        "start": {
+          "line": 34,
+          "character": 1
+        },
+        "end": {
+          "line": 39,
+          "character": 33
+        }
+      }
+    },
+    {
+      "file": "timing/main.py",
+      "description": "These next few functions generate the test data for us to use. If you want additional details, the comments are ery decsriptive in all of these functions to easily understand what is going on.",
+      "line": 47
+    },
+    {
+      "file": "timing/main.py",
+      "description": "This next section is about storing our results in CSV files. When you run this code, all of the tests will be located in the test folder.",
+      "line": 90
+    },
+    {
+      "file": "timing/main.py",
+      "description": "This function creates a CSV file for a given test",
+      "line": 108
+    },
+    {
+      "file": "timing/main.py",
+      "description": "This function is designed to append a line of data to a CSV file used for storing the results of a given test.",
+      "line": 130
+    },
+    {
+      "file": "timing/main.py",
+      "description": "This function does what the title describes, and cretaes a csv file to store the results of a test. To do this, it first checks if the results file already exists. If one does exist, it is returned immediately to avoid overwritiing it.",
+      "line": 156
+    },
+    {
+      "file": "timing/main.py",
+      "description": "This function prepares data to be written to a csv file. ",
+      "line": 170
+    },
+    {
+      "file": "timing/main.py",
+      "description": "This function writes a line of results to a file. First it checks to see of that file has been made. If it hasn't then the function above will create one. Next, it constructs a dictionary 'add_map' that maps each required column name to its value from cols. If a column name is not present in cols, it assigns an empty string. The file is then openedin append mode.",
+      "line": 179
+    },
+    {
+      "file": "timing/main.py",
+      "description": "The first function of section 3 creates a temporary function and writes an input array to it. A unique file is generated using 'uuid.uuid4()' and the adata is writen into the file. The file is opened in write mode because it is newly created and has no existing content. Finally, the file path is returned.",
+      "line": 203
+    },
+    {
+      "file": "timing/main.py",
+      "description": "This function is responsible for deleting the temporary folder once it's no longer needed.",
+      "line": 223
+    },
+    {
+      "file": "timing/main.py",
+      "description": "This function reads data from a temporary file and then deletes the file. It opens the file at the file path given in read mode  and strips all trailing characters. This data is then saves in a list called lines. After doing this, the file is then deleted and the lines from the file are returned.",
+      "line": 232
+    },
+    {
+      "file": "timing/main.py",
+      "description": "If the function has not yet been compiled, that is done so here.",
+      "line": 287
+    },
+    {
+      "file": "timing/main.py",
+      "description": "Test_algorithms tests a sorting algoritm 'n' number of times. ",
+      "line": 296
+    },
+    {
+      "file": "timing/main.py",
+      "description": "This is just a normal clean up function to remove the timeit executable after the program has been run. This is called at the end of the program.",
+      "line": 325
+    },
+    {
+      "file": "timing/main.py",
+      "description": "This function orchestrates the tsting process. A random number is generated and then test_algorithm is called for each test case.",
+      "line": 335
+    }
+  ]
+}
