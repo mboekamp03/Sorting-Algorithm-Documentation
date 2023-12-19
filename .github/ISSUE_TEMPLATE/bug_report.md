@@ -10,6 +10,10 @@ assignees: ''
 **Describe the bug**
 A clear and concise description of what the bug is.
 
+
+**Section of Code**
+Please add what file or section of a file the bug occurs in. Ex. main.py section 3
+
 **To Reproduce**
 Steps to reproduce the behavior:
 1. Go to '...'
